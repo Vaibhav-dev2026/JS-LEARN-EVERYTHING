@@ -1,0 +1,100 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Hide checkbox */
+#theme-toggle {
+    display: none;
+}
+
+/* Light Theme (Default) */
+.page {
+    min-height: 100vh;
+    background: #f4f4f4;
+    color: #222;
+    transition: 0.4s;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Toggle Switch */
+.toggle {
+    width: 70px;
+    height: 32px;
+    background: #ddd;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.toggle span {
+    font-size: 14px;
+}
+
+.slider {
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    transition: 0.4s;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #ffffff;
+    margin-top: 30px;
+}
+
+/* 🌙 Dark Theme */
+#theme-toggle:checked ~ .page {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+#theme-toggle:checked ~ .page header,
+#theme-toggle:checked ~ .page footer,
+#theme-toggle:checked ~ .page .card {
+    background: #1e1e1e;
+    box-shadow: none;
+}
+
+#theme-toggle:checked ~ .page .toggle {
+    background: #555;
+}
+
+#theme-toggle:checked ~ .page .slider {
+    transform: translateX(38px);
+}
